@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app=""
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mmizukami.northernlightsanimation.AnimationActivity"
+    android:orientation="vertical"
+    style="@style/AppTheme"
+    android:theme="@style/AppTheme">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lightsImageView"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:layout_weight="2"
+        android:contentDescription="@string/lights_image_view_text"
+        android:background="@drawable/lights1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameAnimButton"
+        android:layout_weight="1"
+        tools:text="@string/frame_anim_button_text"
+        android:onClick="toggleFrameAnim" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rotateAnimButton"
+        android:layout_weight="1"
+        tools:text="@string/rotate_anim_button_text"
+        android:onClick="toggleRotateAnim" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shakeAnimButton"
+        android:layout_weight="1"
+        tools:text="@string/shake_anim_button_text" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customAnimButton"
+        android:layout_weight="1"
+        tools:text="@string/custom_anim_button_text"
+        android:theme="@style/AppTheme" />
+</LinearLayout>
