@@ -21,6 +21,9 @@ public class AnimationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animation);
+
+        lightsImageView = (ImageView) findViewById(R.id.lightsImageView);
+
     }
 
     public void toggleFrameAnim(View view)
@@ -41,13 +44,45 @@ public class AnimationActivity extends AppCompatActivity {
     {
         rotateAnim = AnimationUtils.loadAnimation(this,R.anim.rotate_anim);
 
-        if(rotateAnim.hasStarted())
+        if(rotateAnim.hasStarted()) {
             lightsImageView.clearAnimation();
+            rotateAnim = null;
+        }
         else
             lightsImageView.startAnimation(rotateAnim);
 
 
 
     }
+
+    public void toggleShakeAnim(View view)
+    {
+        shakeAnim = AnimationUtils.loadAnimation(this,R.anim.shake_anim);
+
+        if(shakeAnim.hasStarted()) {
+            lightsImageView.clearAnimation();
+            shakeAnim = null;
+        }
+        else
+            lightsImageView.startAnimation(shakeAnim);
+
+
+
+    }
+    public void toggleCustomAnim(View view)
+    {
+        customAnim = AnimationUtils.loadAnimation(this,R.anim.custom_anim);
+
+        if(customAnim.hasStarted()) {
+            lightsImageView.clearAnimation();
+            customAnim = null;
+        }
+        else
+            lightsImageView.startAnimation(customAnim);
+
+
+
+    }
+
 
 }
